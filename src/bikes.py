@@ -22,8 +22,8 @@ def read_stations(fileName):
         return output_list
     
 #exercise 2.1
-def free_bikes_stations(station, value):
-    return sorted([(s.free_bikes, s.name) for s in station if s.free_bikes >= value], reverse = True)
+def free_bikes_stations(station, k=5):
+    return sorted([(s.free_bikes, s.name) for s in station if s.free_bikes >= k], reverse = True)
 
 #exercise 2.2
 
@@ -38,7 +38,9 @@ def nearest_stations(stations, location, k=5):
 
 #exercise 4 HW
 def mean_coordinates(stations):
-    pass
+    fb_coord = [s.location for s in stations if s.free_bikes >= 5]
+    return sum(fb_coord[0])/len(fb_coord[0]), sum(fb_coord[1])/len(fb_coord[1])
+    
 '''
 
 '''

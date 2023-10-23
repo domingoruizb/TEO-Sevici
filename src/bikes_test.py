@@ -10,6 +10,7 @@ def main():
     print(nearest_stations(my_stats, c))
     print("2 stations nearest to me: ")
     print(nearest_stations(my_stats, c))
+    print("The total mean coordinates are: ", mean_coordinates(my_stats))
 
 
 #ex 2.1
